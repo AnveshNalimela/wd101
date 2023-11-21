@@ -14,7 +14,7 @@ function submittedForm(event) {
     var user = {
         name: name,
         email: email,
-        password: password, // Note: In a real application, you should not display passwords.
+        password: password, 
         dob: dob,
         acceptTerms: acceptTerms ? 'Yes' : 'No'
     };
@@ -31,19 +31,19 @@ function submittedForm(event) {
    
     displayUsers();
 
-    // Reset the form fields
+   
     document.getElementById('registrationForm').reset();
 }
 
 
 function displayUsers() {
-    // Get the user list element
+  
     var userList = document.getElementById('userList');
 
-    // Clear the existing list
+    
     userList.innerHTML = '';
 
-    // Get the users from local storage
+   
     var users = JSON.parse(localStorage.getItem('users')) || [];
 
    
@@ -63,5 +63,5 @@ function displayUsers() {
     });
 }
 
-// Display users when the page loads
+
 displayUsers();
